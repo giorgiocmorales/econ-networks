@@ -1,5 +1,7 @@
 # CUNTO SANTANA (20XX)
 
+# 1 DATABASE CHECK AND COUNTRY SET
+
 # 1.0 RETRIEVE AND INSPECT AVAILABLE IMF DATASETS ------------------------------
 
 # 1.0.1 Load all dataflows (available IMF datasets)

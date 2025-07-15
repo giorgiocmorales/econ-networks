@@ -1,8 +1,8 @@
 #CUNTO SANTANA (20XX)
 
-#0 INSTALL AND LOAD PACKAGES
+#0  INSTALL AND LOAD PACKAGES
 
-# 0.1 Function to check and load packages
+# 0.1 Function to check and load packages ----
 load_packages <- function(packages) {
   for (pkg in packages) {
     if (!requireNamespace(pkg, quietly = TRUE)) {
@@ -20,12 +20,12 @@ packages <- c("rsdmx", "remotes", #Data download
               "papaja", "dplyr", "tidyr", "plm", "stargazer", "panelvar", "pwt10" #For performing P-VAR
               ) 
 
-# 0.2 Load all packages
+# 0.2 Load all packages ----
 load_packages(packages)
 rm(packages)
 rm(load_packages)
 
-# 0.2
+# 0.3 Directories for GIT project ----
 
 # Root directory of the Git project
 project_dir <- system("git rev-parse --show-toplevel", intern = TRUE)

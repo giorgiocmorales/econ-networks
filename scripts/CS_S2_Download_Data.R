@@ -1,8 +1,8 @@
 #CUNTO SANTANA (20XX)
 
-#2.0 DOWNLOAD DATA ------
+# 2 DOWNLOAD DATA
 
-# US GDP deflator ------
+# 2.1 US GDP deflator ------
 
 # Parameters
 flowRef <- "WEO"
@@ -101,7 +101,7 @@ cat("\nDownload complete.\n")
 cat("Countries left out:", length(countries_leftout), "\n")
 print(countries_leftout)
 
-# IMTS Imports ------
+# 2.2 IMTS Imports ------
 
 # Parameters
 reporters <- na.omit(unique(country_set$sdmx_code))
@@ -163,7 +163,7 @@ cat("\nDownload complete.\n")
 cat("Countries left out:", length(countries_leftout), "\n")
 print(countries_leftout)
 
-# DIP Inward ------
+# 2.3 DIP Inward ------
 
 # Parameters
 reporters <- na.omit(unique(country_set$sdmx_code))
@@ -227,7 +227,7 @@ cat("Countries left out:", length(countries_leftout), "\n")
 print(countries_leftout)
 
 
-# DIP Outward ------
+# 2.4 DIP Outward ------
 
 # Parameters
 reporters <- na.omit(unique(country_set$sdmx_code))
@@ -290,7 +290,7 @@ cat("\nDownload complete.\n")
 cat("Countries left out:", length(countries_leftout), "\n")
 print(countries_leftout)
 
-# PIP Assets ------
+# 2.5 PIP Assets ------
 
 # Parameters
 reporters <- na.omit(unique(country_set$sdmx_code))
@@ -356,7 +356,7 @@ cat("\nDownload complete.\n")
 cat("Countries left out:", length(countries_leftout), "\n")
 print(countries_leftout)
 
-# PIP Liabilities ------
+# 2.6 PIP Liabilities ------
 
 # Parameters
 reporters <- na.omit(unique(country_set$sdmx_code))
@@ -427,7 +427,7 @@ rm(imts_freq_values, imts_indicator_values)
 rm(dip_direction_values, dip_entity_values, dip_freq_values, dip_type_values, dip_indicator_values)
 rm(pip_ac_entry_values, pip_acconting_values, pip_counterpart_sector_values, pip_currency_den_values, pip_currency_values, pip_freq_values, pip_indicator_values, pip_instrument_values, pip_reporting_sector_values)
 
-# BIS LBS -----
+# 2.7 BIS LBS -----
 
 # Set timeout to 10 minutes for large files
 options(timeout = 600)
@@ -541,7 +541,7 @@ lbs_liabilities_base <- lbs_base_filtered %>%
 # Clean up
 rm(lbs_base_filtered)
 
-# COMBINED DATASET  -----
+# 2.8 COMBINED DATASET  -----
 dataset_base <- bind_rows(
   
   # IMTS Exports
